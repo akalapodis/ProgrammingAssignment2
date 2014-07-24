@@ -41,7 +41,10 @@ cacheSolve <- function(x, ...) {
     }
     
     data <- x$get()
+
+    ## if X is a square invertible matrix, then solve(X) returns its inverse
     m <- solve(data, ...)
+
     x$setinverse(m)
     m
 }
